@@ -6,10 +6,21 @@
 1650992042 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1650992930 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
+1651007874 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1650994283 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
+1651009185 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
+	<iostream>
+	"UzytkownikMenager.h"
+
+1651008944 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.h
+	<iostream>
+
+1651007575 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\metodypomocnicze.cpp
+	<sstream>
+	"MetodyPomocnicze.h"
+
+1651009106 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\metodypomocnicze.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -17,6 +28,25 @@
 	<sstream>
 	"Uzytkownik.h"
 
-1650992905 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.h
+1651009568 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.h
 	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+	"PlikZUzytkownikami.h"
+
+1651009809 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.h
+	<iostream>
+	<vector>
+	<fstream>
+	"Uzytkownik.h"
+	"MetodyPomocnicze.h"
+
+1651009426 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.cpp
+	"PlikZUzytkownikami.h"
+
+1651009568 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.cpp
+	"UzytkownikMenager.h"
 
