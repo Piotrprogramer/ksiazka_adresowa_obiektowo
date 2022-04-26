@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1650993015 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\main.cpp
+	<iostream>
+	"KsiazkaAdresowa.h"
+
+1650992042 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.cpp
+	"Uzytkownik.h"
+
+1650992930 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
+	"KsiazkaAdresowa.h"
+
+1650994283 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Uzytkownik.h"
+
+1650992905 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.h
+	<iostream>
+
