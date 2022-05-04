@@ -32,7 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="KsiazkaAdresowa.cpp" />
+		<Unit filename="KsiazkaAdresowa.h" />
+		<Unit filename="MetodyPomocnicze.cpp" />
+		<Unit filename="MetodyPomocnicze.h" />
+		<Unit filename="PlikZUzytkownikami.cpp" />
+		<Unit filename="PlikZUzytkownikami.h" />
+		<Unit filename="Uzytkownicy.txt" />
+		<Unit filename="Uzytkownik.cpp" />
+		<Unit filename="UzytkownikMenager.cpp" />
+		<Unit filename="UzytkownikMenager.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="uzytkownik.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
