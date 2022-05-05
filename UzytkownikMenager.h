@@ -28,8 +28,11 @@ public:
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
+
     void logowanieUzytkownika();
     void wylogujUzytkownika();
+    void zmienHasloZalogowanegoUzytkownika();
+    void zapiszWszystkichUzytkownikowDoPliku();
 
     void wyswietlIdZalogowanegoUzytkownika();
 };
