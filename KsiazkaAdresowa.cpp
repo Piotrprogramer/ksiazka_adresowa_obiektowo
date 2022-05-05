@@ -26,3 +26,8 @@ void KsiazkaAdresowa::wylogujUzytkownika()
     cout<<endl<<"Wylogowales sie poprawnie"<<endl;
     system("pause");
 }
+
+void KsiazkaAdresowa::zmienHasloZalogowanegoUzytkownika()
+{
+    uzytkownikMenager.zmienHasloZalogowanegoUzytkownika();
+}

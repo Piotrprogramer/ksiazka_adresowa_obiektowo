@@ -9,9 +9,10 @@ int main()
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     //ksiazkaAdresowa.rejestracjaUzytkownika();
     ksiazkaAdresowa.logowanieUzytkownika();
+    //ksiazkaAdresowa.wyswietlIdZalogowanegoUzytkownika();
+    //ksiazkaAdresowa.wylogujUzytkownika();
     ksiazkaAdresowa.wyswietlIdZalogowanegoUzytkownika();
-    ksiazkaAdresowa.wylogujUzytkownika();
-    ksiazkaAdresowa.wyswietlIdZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAdresowa.zmienHasloZalogowanegoUzytkownika();
+    ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
     return 0;
 }
