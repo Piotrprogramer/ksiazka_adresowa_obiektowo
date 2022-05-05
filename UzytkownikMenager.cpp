@@ -1,5 +1,6 @@
 #include "UzytkownikMenager.h"
 #include "MetodyPomocnicze.h"
+#include "PlikZUzytkownikami.h"
 #include "uzytkownik.h"
 
 void UzytkownikMenager::rejestracjaUzytkownika() {
@@ -102,25 +103,26 @@ void UzytkownikMenager::zmienHasloZalogowanegoUzytkownika() {
     string haslo;
     bool hasloPoprawnieZmienione=false;
     cout<<endl<<"Podaj obecne haslo: ";
-    metodyPomocnicze.wczytajLinie();
+    haslo = metodyPomocnicze.wczytajLinie();
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
     while (itr != uzytkownicy.end()) {
-        if(itr->pobierzHaslo() == haslo) {
+        if(itr->pobierzHaslo() == haslo && itr->pobierzId() == idZalogowanegoUzytkownika) {
             cout<<endl<<"Podaj nowe haslo: ";
             haslo = metodyPomocnicze.wczytajLinie();
             itr->ustawHaslo(haslo);
-            cout<<"Haslo zmienione poprawnie ";
+            cout<<itr->pobierzLogin()<<endl;
+            cout<<"Haslo zmienione poprawnie "<<endl;
             hasloPoprawnieZmienione = true;
+            zapiszWszystkichUzytkownikowDoPliku();
             system("pause");
         }
         itr++;
     }
     if(!hasloPoprawnieZmienione) {
-        cout<<endl<<"Podales nieprawidlowe obecne haslo";
+        cout<<endl<<"Podales nieprawidlowe obecne haslo "<<endl;
         system("pause");
     }
-
 }
 
 void UzytkownikMenager::wylogujUzytkownika() {
@@ -130,4 +132,9 @@ void UzytkownikMenager::wylogujUzytkownika() {
 void UzytkownikMenager::wyswietlIdZalogowanegoUzytkownika() {
     cout<<endl<<"Zalogowany uzytkownik o ID: "<<idZalogowanegoUzytkownika<<endl;
     system("pause");
+}
+
+void UzytkownikMenager::zapiszWszystkichUzytkownikowDoPliku()
+{
+    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
