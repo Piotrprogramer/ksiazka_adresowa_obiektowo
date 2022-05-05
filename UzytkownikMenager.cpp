@@ -1,4 +1,6 @@
 #include "UzytkownikMenager.h"
+#include "MetodyPomocnicze.h"
+#include "uzytkownik.h"
 
 void UzytkownikMenager::rejestracjaUzytkownika()
 {
@@ -65,3 +67,50 @@ void UzytkownikMenager::wczytajUzytkownikowZPliku()
 {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
+
+void UzytkownikMenager::logowanieUzytkownika()
+{
+    //sstd::cin.clear();
+    //cin.ignore();
+    cin.sync();
+    bool znalezionoLogin = false;
+    MetodyPomocnicze metodyPomocnicze;
+    string login = "", haslo = "";
+
+    cout << endl << "Podaj login: ";
+    login = metodyPomocnicze.wczytajLinie();
+    vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
+    while (itr != uzytkownicy.end())
+    {
+        if (itr -> pobierzLogin() == login){
+            znalezionoLogin = true;
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--){
+                cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                haslo = metodyPomocnicze.wczytajLinie();
+                if (itr ->pobierzHaslo() == haslo){
+                    cout << endl << "Zalogowales sie." << endl << endl;
+                    system("pause");
+                    idZalogowanegoUzytkownika = itr->pobierzId();
+                    break;
+                }
+                if(iloscProb == 1){
+                    cout << "Wprowadzono 3 razy bledne haslo." << endl;
+                    system("pause");
+                    break;
+                }
+            }
+            break;
+        }
+        itr++;
+    }
+    if(!znalezionoLogin){
+    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    system("pause");
+    }
+}
+
+ void UzytkownikMenager::wyswietlIdZalogowanegoUzytkownika()
+ {
+     cout<<endl<<"Zalogowany uzytkownik o ID: "<<idZalogowanegoUzytkownika<<endl;
+     system("pause");
+ }
