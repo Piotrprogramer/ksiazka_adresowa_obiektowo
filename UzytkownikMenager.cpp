@@ -70,8 +70,6 @@ void UzytkownikMenager::wczytajUzytkownikowZPliku()
 
 void UzytkownikMenager::logowanieUzytkownika()
 {
-    //sstd::cin.clear();
-    //cin.ignore();
     cin.sync();
     bool znalezionoLogin = false;
     MetodyPomocnicze metodyPomocnicze;
@@ -108,6 +106,12 @@ void UzytkownikMenager::logowanieUzytkownika()
     system("pause");
     }
 }
+
+void UzytkownikMenager::wylogujUzytkownika()
+{
+    idZalogowanegoUzytkownika = 0;
+}
+
 
  void UzytkownikMenager::wyswietlIdZalogowanegoUzytkownika()
  {

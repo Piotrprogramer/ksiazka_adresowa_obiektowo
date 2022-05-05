@@ -19,3 +19,10 @@ void KsiazkaAdresowa::wyswietlIdZalogowanegoUzytkownika()
 {
     uzytkownikMenager.wyswietlIdZalogowanegoUzytkownika();
 }
+
+void KsiazkaAdresowa::wylogujUzytkownika()
+{
+    uzytkownikMenager.wylogujUzytkownika();
+    cout<<endl<<"Wylogowales sie poprawnie"<<endl;
+    system("pause");
+}
