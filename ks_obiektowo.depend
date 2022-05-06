@@ -45,7 +45,7 @@
 	"Uzytkownik.h"
 	"MetodyPomocnicze.h"
 
-1651765134 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.cpp
+1651829488 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
 1651765134 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.cpp
@@ -53,4 +53,10 @@
 	"MetodyPomocnicze.h"
 	"PlikZUzytkownikami.h"
 	"uzytkownik.h"
+
+1651828852 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.cpp
+	"Adresat.h"
+
+1651781621 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.h
+	<iostream>
 
