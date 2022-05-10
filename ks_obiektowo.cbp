@@ -32,10 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Adresat.cpp" />
+		<Unit filename="Adresat.h" />
+		<Unit filename="AdresatMenager.cpp" />
+		<Unit filename="AdresatMenager.h" />
 		<Unit filename="KsiazkaAdresowa.cpp" />
 		<Unit filename="KsiazkaAdresowa.h" />
 		<Unit filename="MetodyPomocnicze.cpp" />
 		<Unit filename="MetodyPomocnicze.h" />
+		<Unit filename="PlikZAdresatami.cpp" />
+		<Unit filename="PlikZAdresatami.h" />
 		<Unit filename="PlikZUzytkownikami.cpp" />
 		<Unit filename="PlikZUzytkownikami.h" />
 		<Unit filename="Uzytkownicy.txt" />

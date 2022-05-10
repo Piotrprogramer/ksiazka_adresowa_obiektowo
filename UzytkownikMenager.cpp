@@ -134,6 +134,10 @@ void UzytkownikMenager::wyswietlIdZalogowanegoUzytkownika() {
     system("pause");
 }
 
+int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika() {
+    return idZalogowanegoUzytkownika;
+}
+
 void UzytkownikMenager::zapiszWszystkichUzytkownikowDoPliku()
 {
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
