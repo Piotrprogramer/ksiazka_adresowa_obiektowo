@@ -9,6 +9,7 @@
 
 #include "Uzytkownik.h"
 #include "PlikZUzytkownikami.h"
+#include "AdresatMenager.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ class UzytkownikMenager
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
 
 public:
+
     UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
@@ -34,6 +36,7 @@ public:
     void zmienHasloZalogowanegoUzytkownika();
     void zapiszWszystkichUzytkownikowDoPliku();
 
+    int pobierzIdZalogowanegoUzytkownika();
     void wyswietlIdZalogowanegoUzytkownika();
 };
 
