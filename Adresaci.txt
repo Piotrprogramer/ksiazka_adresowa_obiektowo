@@ -1,7 +1,1 @@
-1|2|string imie;|string nazwisko;|string numerTelefonu;|string email;|string adres;|
-2|4199120|Piotr|wasyl|7987|email|lupawa|
-3|4199120|kasia|wasylka|456786|asd|asd|
-4|4199120|jacek|wasyl|789|gmail|piekarniczaq|
-5|4199120|ùojciec|wasyl|asdasd|asda|sdas|
-6|2686644|nowy|test|45635|asfasf|asf|
-7|2|piotrer|nowy|test|sda|asf|
+1|2686644|Piotr|wasyl|asf|asf|asf|

@@ -1,6 +1,5 @@
 
 #include "AdresatMenager.h"
-//#include "PlikZAdresatami.h"
 
 using namespace std;
 

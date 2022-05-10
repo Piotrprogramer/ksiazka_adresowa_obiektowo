@@ -8,7 +8,6 @@
 #include <sstream>
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
-//#include "KsiazkaAdresowa.h"
 
 using namespace std;
 

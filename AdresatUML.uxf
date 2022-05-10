@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>50</y>
+      <w>530</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>PlikZAdresatami
+--
+-nazwaPlikuZAdresatami: string;
+-zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(): string;
+-czyPlikJestPusty(): bool;
++wczytanieAdresatowDoPamieci(): vector &lt;Adresat&gt; 
++pobierzDaneAdresata(): Adresat;
++dopiszAdresataDoPliku(): void;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>50</y>
+      <w>240</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Adresat
+--
+-id: Integer
+-idUzytkownika: Integer
+-imie: string
+-nazwisko: string
+-numerTelefonu: string
+-email: string
+-adres: string
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>240</y>
+      <w>470</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>AdresatMenager
+-adresaci: vector &lt;Adresat&gt;;
+-plikZAdresatami: PlikZAdresatami;
+--
+-podajDaneNowegoAdresata(): Adresat
+-pobierzIdNowegoAdresata(): Integer
++wczytanieAdresatowDoPamieci(): void;
++dodawanieNowegoAdresata(): void;
++wyswietlWszystkichAdresatow(): void;</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

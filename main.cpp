@@ -9,17 +9,7 @@ using namespace std;
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-    //ksiazkaAdresowa.rejestracjaUzytkownika();
-    ksiazkaAdresowa.logowanieUzytkownika();
-    //ksiazkaAdresowa.wyswietlIdZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wylogujUzytkownika();
-    //ksiazkaAdresowa.wyswietlIdZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.zmienHasloZalogowanegoUzytkownika();
-    //ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
-
-    //PlikZAdresatami plikZAdresatami;
-    //plikZAdresatami.wczytanieAdresatowDoPamieci();
+    //ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wczytanieAdresatowDoPamieci();
 
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
