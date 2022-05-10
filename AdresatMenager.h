@@ -16,6 +16,7 @@ class AdresatMenager {
     PlikZAdresatami plikZAdresatami;
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
     int pobierzIdNowegoAdresata();
+
 public:
     void wczytanieAdresatowDoPamieci();
     void dodawanieNowegoAdresata(int idZalogowanegoUzytkownika);
