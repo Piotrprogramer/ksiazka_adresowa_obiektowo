@@ -25,7 +25,7 @@ public:
     void zmienHasloZalogowanegoUzytkownika();
 
     void dodawanieNowegoAdresata();
-    void wczytanieAdresatowDoPamieci();
+    void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
 
     int pobierzIdZalogowanegoUzytkownika();

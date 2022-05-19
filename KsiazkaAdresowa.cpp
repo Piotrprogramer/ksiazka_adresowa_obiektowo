@@ -42,9 +42,9 @@ void KsiazkaAdresowa::dodawanieNowegoAdresata()
  adresatMenager.dodawanieNowegoAdresata(pobierzIdZalogowanegoUzytkownika());
 }
 
-void KsiazkaAdresowa::wczytanieAdresatowDoPamieci()
+void KsiazkaAdresowa::wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika)
 {
- adresatMenager.wczytanieAdresatowDoPamieci();
+ adresatMenager.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()

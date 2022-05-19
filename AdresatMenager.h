@@ -18,7 +18,7 @@ class AdresatMenager {
     int pobierzIdNowegoAdresata();
 
 public:
-    void wczytanieAdresatowDoPamieci();
+    void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
     void dodawanieNowegoAdresata(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
 };

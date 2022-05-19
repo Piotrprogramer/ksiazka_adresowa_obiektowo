@@ -7,7 +7,7 @@
 #include <fstream>
 #include <sstream>
 
-#include "Uzytkownik.h"
+//#include "Uzytkownik.h"
 
 using namespace std;
 
@@ -16,6 +16,7 @@ class MetodyPomocnicze
     public:
     static string konwerjsaIntNaString(int liczba);
     string wczytajLinie();
+    int konwersjaStringNaInt(string liczba);
 };
 
 #endif
