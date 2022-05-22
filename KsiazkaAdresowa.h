@@ -12,7 +12,7 @@ class KsiazkaAdresowa
 {
     UzytkownikMenager uzytkownikMenager;
     AdresatMenager *adresatMenager;
-    const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
+    //const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenager(nazwaPlikuZUzytkownikami)
