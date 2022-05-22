@@ -39,16 +39,16 @@ void KsiazkaAdresowa::zmienHasloZalogowanegoUzytkownika()
 
 void KsiazkaAdresowa::dodawanieNowegoAdresata()
 {
- adresatMenager.dodawanieNowegoAdresata(pobierzIdZalogowanegoUzytkownika());
+ adresatMenager->dodawanieNowegoAdresata(pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika)
 {
- adresatMenager.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
+ adresatMenager->wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
 }
 
 void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
-    adresatMenager.wyswietlWszystkichAdresatow();
+    adresatMenager->wyswietlWszystkichAdresatow();
 }
 

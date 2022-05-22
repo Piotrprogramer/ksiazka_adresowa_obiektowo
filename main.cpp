@@ -25,8 +25,9 @@ int _main()
 #include "PlikZAdresatami.h"
 int main()
 {
-    AdresatMenager adresatMenager;
-    adresatMenager.wczytanieAdresatowDoPamieci(2);
+    AdresatMenager adresatMenager(1);
+    //adresatMenager.wczytanieAdresatowDoPamieci(2);
     adresatMenager.wyswietlWszystkichAdresatow();
-
+    adresatMenager.dodawanieNowegoAdresata(1);
+    adresatMenager.wyswietlWszystkichAdresatow();
 }
