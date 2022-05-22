@@ -17,6 +17,7 @@ class MetodyPomocnicze
     static string konwerjsaIntNaString(int liczba);
     string wczytajLinie();
     int konwersjaStringNaInt(string liczba);
+    char wczytajZnak();
 };
 
 #endif

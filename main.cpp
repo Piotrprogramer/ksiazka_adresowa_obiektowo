@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main()
+int _main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
@@ -25,6 +25,15 @@ int main()
 
     return 0;
 }
+
+#include "Menu.h"
+int main()
+{
+    Menu menu;
+    menu.wybierzOpcjeZMenuGlownego();
+    menu.wybierzOpcjeZMenuUzytkownika();
+}
+
 
 #include "UzytkownikMenager.h"
 int UzytkownikMenager_main()
