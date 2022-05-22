@@ -18,7 +18,6 @@ public:
 
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenager(nazwaPlikuZUzytkownikami)
     {
-    //uzytkownikMenager.wczytajUzytkownikowZPliku();
     adresatMenager = NULL;
     };
 
@@ -27,6 +26,7 @@ public:
     delete adresatMenager;
     adresatMenager = NULL;
     }
+
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();

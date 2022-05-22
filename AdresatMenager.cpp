@@ -51,8 +51,9 @@ Adresat AdresatMenager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
 int AdresatMenager::pobierzIdNowegoAdresata() {
     if (adresaci.empty() == true)
         return 1;
-    else
-        return adresaci.back().pobierzId() + 1;
+    else{
+        return plikZAdresatami.pobierzIdOstatniegoAdresata()+1;
+    }
 }
 
 void AdresatMenager::wyswietlWszystkichAdresatow()
