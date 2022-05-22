@@ -26,6 +26,7 @@ public:
     this-> email=email;
     this-> adres=adres;
     }
+
     void ustawId(int noweId);
     void ustawIdUzytkownika(int noweIdUzytkownika);
     void ustawImie(string noweImie);
