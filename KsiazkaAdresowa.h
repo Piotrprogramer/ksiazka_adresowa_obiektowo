@@ -13,9 +13,11 @@ class KsiazkaAdresowa
 {
     UzytkownikMenager uzytkownikMenager;
     AdresatMenager *adresatMenager;
+
     //const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
 
 public:
+        Menu menu;
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenager(nazwaPlikuZUzytkownikami)
     {
     adresatMenager = NULL;

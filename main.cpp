@@ -6,9 +6,12 @@
 
 using namespace std;
 
-int _main()
+int main()
 {
+
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
+    ksiazkaAdresowa.menu.wybierzOpcjeZMenuGlownego();
+    ksiazkaAdresowa.menu.wybierzOpcjeZMenuUzytkownika();
 
     ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
@@ -27,7 +30,7 @@ int _main()
 }
 
 #include "Menu.h"
-int main()
+int Menu_main()
 {
     Menu menu;
     menu.wybierzOpcjeZMenuGlownego();
