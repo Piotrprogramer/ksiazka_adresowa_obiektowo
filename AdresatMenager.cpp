@@ -3,9 +3,9 @@
 
 using namespace std;
 
-void AdresatMenager::wczytanieAdresatowDoPamieci()
+void AdresatMenager::wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika)
 {
-    adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci();
+    adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
 }
 
 void AdresatMenager::dodawanieNowegoAdresata(int idZalogowanegoUzytkownika)
