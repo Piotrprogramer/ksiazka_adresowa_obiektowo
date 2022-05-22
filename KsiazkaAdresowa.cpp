@@ -13,6 +13,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow()
 void KsiazkaAdresowa::logowanieUzytkownika()
 {
     uzytkownikMenager.logowanieUzytkownika();
+    adresatMenager = new AdresatMenager(uzytkownikMenager.pobierzIdZalogowanegoUzytkownika());
 }
 
 void KsiazkaAdresowa::wyswietlIdZalogowanegoUzytkownika()
@@ -28,6 +29,9 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMenager.wylogujUzytkownika();
+    delete adresatMenager;
+    adresatMenager = NULL;
+
     cout<<endl<<"Wylogowales sie poprawnie"<<endl;
     system("pause");
 }

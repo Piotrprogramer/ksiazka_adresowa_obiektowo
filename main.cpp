@@ -6,24 +6,37 @@
 
 using namespace std;
 
-int _main()
+int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt");
 
-    ksiazkaAdresowa.wczytanieAdresatowDoPamieci(2);
-
+    ksiazkaAdresowa.logowanieUzytkownika();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
-    cout<<"nowa linia"<<endl;
-        ksiazkaAdresowa.wczytanieAdresatowDoPamieci(3);
-
+    ksiazkaAdresowa.wylogujUzytkownika();
+    ksiazkaAdresowa.rejestracjaUzytkownika();
+    ksiazkaAdresowa.logowanieUzytkownika();
+    ksiazkaAdresowa.dodawanieNowegoAdresata();
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    ksiazkaAdresowa.wylogujUzytkownika();
+
+
+    //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
+    //ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     return 0;
 }
 
+#include "UzytkownikMenager.h"
+int UzytkownikMenager_main()
+{
+    UzytkownikMenager uzytkownikMenager("Uzytkownicy.txt");
+    //uzytkownikMenager.wczytajUzytkownikowZPliku();
+    uzytkownikMenager.wypiszWszystkichUzytkownikow();
+
+}
 
 #include "PlikZAdresatami.h"
-int main()
+int PlikZAdresatami_main()
 {
     AdresatMenager adresatMenager(1);
     //adresatMenager.wczytanieAdresatowDoPamieci(2);
