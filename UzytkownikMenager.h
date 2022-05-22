@@ -23,9 +23,13 @@ class UzytkownikMenager
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+    MetodyPomocnicze metodyPomocnicze;
 
 public:
-    UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZUzytkownikami(nazwaPlikuZUzytkownikami){};
+    UzytkownikMenager(string nazwaPlikuZUzytkownikami): plikZUzytkownikami(nazwaPlikuZUzytkownikami)
+    {
+    wczytajUzytkownikowZPliku();
+    };
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();

@@ -63,7 +63,6 @@ void UzytkownikMenager::wczytajUzytkownikowZPliku() {
 void UzytkownikMenager::logowanieUzytkownika() {
     cin.sync();
     bool znalezionoLogin = false;
-    MetodyPomocnicze metodyPomocnicze;
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";

@@ -1,18 +1,19 @@
 # depslib dependency file v1.0
-1653249789 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\main.cpp
+1653253089 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 	"PlikZAdresatami.h"
 	"AdresatMenager.h"
+	"UzytkownikMenager.h"
 	"PlikZAdresatami.h"
 
 1650992042 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1653243923 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
+1653254258 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1653247589 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
+1653253089 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenager.h"
 	"AdresatMenager.h"
@@ -31,7 +32,7 @@
 	<fstream>
 	<sstream>
 
-1652745196 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.h
+1653252925 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -40,7 +41,7 @@
 	"Uzytkownik.h"
 	"PlikZUzytkownikami.h"
 
-1653238285 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.h
+1653252943 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -51,7 +52,7 @@
 1652745196 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzuzytkownikami.cpp
 	"PlikZUzytkownikami.h"
 
-1652745196 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.cpp
+1653251768 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownikmenager.cpp
 	"UzytkownikMenager.h"
 	"MetodyPomocnicze.h"
 	"PlikZUzytkownikami.h"
@@ -60,22 +61,22 @@
 1652745196 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.cpp
 	"Adresat.h"
 
-1653238806 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.h
+1653251434 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.h
 	<iostream>
 
-1653250543 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.cpp
+1653251434 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1653250152 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.h
+1653251434 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.h
 	<vector>
 	<fstream>
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
-1653250388 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.cpp
+1653251434 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.cpp
 	"AdresatMenager.h"
 
-1653249631 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.h
+1653251434 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.h
 	<iostream>
 	<vector>
 	<windows.h>
