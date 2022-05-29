@@ -4,7 +4,7 @@
 
 char Menu::wybierzOpcjeZMenuGlownego()
 {
-    char wybor;
+    char wybor = ' ';
 
     system("cls");
     cout << "    >>> MENU  GLOWNE <<<" << endl;
@@ -14,13 +14,15 @@ char Menu::wybierzOpcjeZMenuGlownego()
     cout << "9. Koniec programu" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = metodyPomocnicze.wczytajZnak();
 
-    return wybor;
+    while( 1 ){
+        wybor = metodyPomocnicze.wczytajZnak();
+        if (wybor == '1' || wybor == '2' || wybor == '9') break;
+        else cout<<"Nie ma opcji '"<<wybor<<"', wybierz ponownie"<<endl;
+    }
 }
 
-char Menu::wybierzOpcjeZMenuUzytkownika()
-{
+char Menu::wybierzOpcjeZMenuUzytkownika() {
     char wybor;
 
     system("cls");
@@ -37,7 +39,11 @@ char Menu::wybierzOpcjeZMenuUzytkownika()
     cout << "8. Wyloguj sie" << endl;
     cout << "---------------------------" << endl;
     cout << "Twoj wybor: ";
-    wybor = metodyPomocnicze.wczytajZnak();
 
+    while( 1) {
+        wybor = metodyPomocnicze.wczytajZnak();
+        if( wybor == '1' || wybor == '2' || wybor == '3' || wybor == '4'|| wybor == '5' || wybor == '6' || wybor == '7' || wybor == '8' ) break;
+        else cout<<"Nie ma opcji '"<<wybor<<"', wybierz ponownie"<<endl;
+    }
     return wybor;
 }
