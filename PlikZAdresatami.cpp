@@ -23,7 +23,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
     idOstatniegoAdresata++;
     }
     else
-        cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZAdresatami << " i zapisac w nim danych." << endl;
+    cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZAdresatami << " i zapisac w nim danych." << endl;
     plikTekstowy.close();
 }
 

@@ -22,4 +22,5 @@ int main()
     ksiazkaAdresowa.wylogujUzytkownika();
 
     return 0;
+
 }
