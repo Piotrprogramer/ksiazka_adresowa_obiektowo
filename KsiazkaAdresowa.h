@@ -5,18 +5,21 @@
 
 #include "UzytkownikMenager.h"
 #include "AdresatMenager.h"
+#include "Menu.h"
 
 using namespace std;
 
 class KsiazkaAdresowa
 {
+    Menu menu;
     UzytkownikMenager uzytkownikMenager;
     AdresatMenager *adresatMenager;
-    //const string NAZWA_PLIKU_Z_UZYTKOWNIKAMI;
+    string nazwaPlikuZAdresatami;
 
 public:
-    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami): uzytkownikMenager(nazwaPlikuZUzytkownikami)
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami): uzytkownikMenager(nazwaPlikuZUzytkownikami)
     {
+    this -> nazwaPlikuZAdresatami = nazwaPlikuZAdresatami;
     adresatMenager = NULL;
     };
 
@@ -38,5 +41,8 @@ public:
 
     int pobierzIdZalogowanegoUzytkownika();
     void wyswietlIdZalogowanegoUzytkownika();
+
+    char wybierzOpcjeZMenuGlownego();
+    char wybierzOpcjeZMenuUzytkownika();
 };
 #endif

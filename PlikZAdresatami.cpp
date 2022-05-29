@@ -6,7 +6,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
 {
     string liniaZDanymiAdresata = "";
     fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::app);
+    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::app);
 
     if (plikTekstowy.good() == true)
     {
@@ -23,13 +23,13 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat)
     idOstatniegoAdresata++;
     }
     else
-        cout << "Nie udalo sie otworzyc pliku " << NAZWA_PLIKU_Z_ADRESATAMI << " i zapisac w nim danych." << endl;
+        cout << "Nie udalo sie otworzyc pliku " << nazwaPlikuZAdresatami << " i zapisac w nim danych." << endl;
     plikTekstowy.close();
 }
 
 bool PlikZAdresatami::czyPlikJestPusty()
 {
-    ifstream plikTekstowy(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+    ifstream plikTekstowy(nazwaPlikuZAdresatami.c_str(), ios::in);
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
@@ -58,7 +58,7 @@ vector <Adresat> PlikZAdresatami::wczytanieAdresatowDoPamieci(int idZalogowanego
     vector <Adresat> adresaci;
     string daneJednegoAdresataOddzielonePionowymiKreskami = "";
     fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::in);
+    plikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
     if (plikTekstowy.good() == true) {
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami)) {
             if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami))

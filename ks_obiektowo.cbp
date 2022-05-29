@@ -38,6 +38,8 @@
 		<Unit filename="AdresatMenager.h" />
 		<Unit filename="KsiazkaAdresowa.cpp" />
 		<Unit filename="KsiazkaAdresowa.h" />
+		<Unit filename="Menu.cpp" />
+		<Unit filename="Menu.h" />
 		<Unit filename="MetodyPomocnicze.cpp" />
 		<Unit filename="MetodyPomocnicze.h" />
 		<Unit filename="PlikZAdresatami.cpp" />

@@ -18,7 +18,7 @@ class AdresatMenager {
     int pobierzIdNowegoAdresata();
 
 public:
-    AdresatMenager(int idZalogowanegoUzytkownika)
+    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami)
     {
     wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
     }
