@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main()
+int _main()
 {
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
@@ -16,15 +16,25 @@ int main()
     ksiazkaAdresowa.logowanieUzytkownika();
 
     ksiazkaAdresowa.dodawanieNowegoAdresata();
-    ksiazkaAdresowa.dodawanieNowegoAdresata();
-    ksiazkaAdresowa.dodawanieNowegoAdresata();
-    ksiazkaAdresowa.dodawanieNowegoAdresata();
-    ksiazkaAdresowa.dodawanieNowegoAdresata();
 
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     ksiazkaAdresowa.wylogujUzytkownika();
 
     return 0;
+
+}
+
+#include "AdresatMenager.h"
+int main(){
+
+AdresatMenager adresatMenager(2,"Adresaci.txt");
+adresatMenager.wczytanieAdresatowDoPamieci(2);
+adresatMenager.wyswietlWszystkichAdresatow();
+adresatMenager.edytujAdresata();
+adresatMenager.wyswietlWszystkichAdresatow();
+
+
+
 
 }

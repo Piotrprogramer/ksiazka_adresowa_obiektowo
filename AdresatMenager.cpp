@@ -68,7 +68,7 @@ void AdresatMenager::wyswietlWszystkichAdresatow()
 void AdresatMenager::edytujAdresata()
 {
     system("cls");
-    Adresat adresat;
+    //Adresat adresat;
     int idEdytowanegoAdresata = 0;
     int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
@@ -81,39 +81,41 @@ void AdresatMenager::edytujAdresata()
 
     for (int i = 0; i < adresaci.size(); i++)
     {
-        if (adresaci[i].id == idEdytowanegoAdresata)
+        if (adresaci[i].pobierzId() == idEdytowanegoAdresata)
         {
+            Adresat adresat;
+            adresat = adresaci[i];
             czyIstniejeAdresat = true;
-            wybor = wybierzOpcjeZMenuEdycja();
+            wybor = wybierzOpcjeZMenuEdycja(idEdytowanegoAdresata);
 
             switch (wybor)
             {
             case '1':
                 cout << "Podaj nowe imie: ";
-                adresaci[i].imie = wczytajLinie();
-                adresaci[i].imie = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].imie);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                //adresaci[i].pobierzImie() = metodyPomocnicze.wczytajLinie();
+                adresaci[i].ustawImie(  metodyPomocnicze.wczytajLinie() );
+                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
-                adresaci[i].nazwisko = wczytajLinie();
-                adresaci[i].nazwisko = zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].nazwisko);
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                //adresaci[i].pobierzNazwisko() = metodyPomocnicze.wczytajLinie();
+                adresaci[i].ustawNazwisko( metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].pobierzNazwisko()) );
+                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
-                adresaci[i].numerTelefonu = wczytajLinie();
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                adresaci[i].ustawNumerTelefonu( metodyPomocnicze.wczytajLinie() );
+                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
-                adresaci[i].email = wczytajLinie();
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                adresaci[i].ustawEmail( metodyPomocnicze.wczytajLinie() );
+                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
-                adresaci[i].adres = wczytajLinie();
-                zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                adresaci[i].ustawAdres( metodyPomocnicze.wczytajLinie() );
+                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
@@ -130,3 +132,31 @@ void AdresatMenager::edytujAdresata()
     }
     system("pause");
 }
+
+int AdresatMenager::podajIdWybranegoAdresata()
+{
+    int idWybranegoAdresata = 0;
+    cout << "Podaj numer ID Adresata: ";
+    idWybranegoAdresata  = metodyPomocnicze.wczytajLiczbeCalkowita();
+    return idWybranegoAdresata;
+}
+
+char AdresatMenager::wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata)
+{
+    char wybor;
+
+    cout << endl << "   >>> MENU  EDYCJA <<<" << endl;
+    cout << "---------------------------" << endl;
+    cout << "Ktore dane zaktualizowac: " << endl;
+    cout << "1 - Imie- "<< adresaci[idEdytowanegoAdresata].pobierzImie()<< endl;
+    cout << "2 - Nazwisko- " << adresaci[idEdytowanegoAdresata].pobierzNazwisko()<< endl;
+    cout << "3 - Numer telefonu- " << adresaci[idEdytowanegoAdresata].pobierzNumerTelefonu()<< endl;
+    cout << "4 - Email- " << adresaci[idEdytowanegoAdresata].pobierzEmail()<< endl;
+    cout << "5 - Adres- " << adresaci[idEdytowanegoAdresata].pobierzAdres()<< endl;
+    cout << "6 - Powrot " << endl;
+    cout << endl << "Twoj wybor: ";
+    wybor = metodyPomocnicze.wczytajZnak();
+
+    return wybor;
+}
+
