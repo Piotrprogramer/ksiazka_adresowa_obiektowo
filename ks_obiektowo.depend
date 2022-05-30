@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1653833499 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\main.cpp
+1653950343 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\main.cpp
 	<iostream>
 	"KsiazkaAdresowa.h"
 	"PlikZAdresatami.h"
@@ -8,10 +8,10 @@
 1650992042 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\uzytkownik.cpp
 	"Uzytkownik.h"
 
-1653833404 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
+1653950319 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.cpp
 	"KsiazkaAdresowa.h"
 
-1653833404 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
+1653950127 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\ksiazkaadresowa.h
 	<iostream>
 	"UzytkownikMenager.h"
 	"AdresatMenager.h"
@@ -63,7 +63,7 @@
 1653251434 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.h
 	<iostream>
 
-1653834229 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.cpp
+1653949791 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
 1653833404 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.h
@@ -72,7 +72,7 @@
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
-1653834229 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.cpp
+1653949791 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.cpp
 	"AdresatMenager.h"
 
 1653833404 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.h

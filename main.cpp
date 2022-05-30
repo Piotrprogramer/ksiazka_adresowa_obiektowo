@@ -16,6 +16,10 @@ int main()
     ksiazkaAdresowa.logowanieUzytkownika();
 
     ksiazkaAdresowa.dodawanieNowegoAdresata();
+    ksiazkaAdresowa.dodawanieNowegoAdresata();
+    ksiazkaAdresowa.dodawanieNowegoAdresata();
+    ksiazkaAdresowa.dodawanieNowegoAdresata();
+    ksiazkaAdresowa.dodawanieNowegoAdresata();
 
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 

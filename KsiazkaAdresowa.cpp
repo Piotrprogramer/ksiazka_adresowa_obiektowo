@@ -29,6 +29,7 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika()
 void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMenager.wylogujUzytkownika();
+
     delete adresatMenager;
     adresatMenager = NULL;
 
