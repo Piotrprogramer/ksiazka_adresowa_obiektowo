@@ -5,11 +5,15 @@
 #include <fstream>
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
+#include "PlikTekstowy.h"
 
 using namespace std;
 
 class PlikZAdresatami
 {
+    MetodyPomocnicze metodyPomocnicze;
+    PlikTekstowy plikTekstowy;
+
     const string nazwaPlikuZAdresatami;
     const string nazwaTymczasowegoPlikuZAdresatami = "TymczasowyPlikZAdresatami";
     int idOstatniegoAdresata;
@@ -20,11 +24,6 @@ class PlikZAdresatami
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
     void ustawIdOstatniegoAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    MetodyPomocnicze metodyPomocnicze;
-
-
-    void usunPlik(string nazwaPlikuZAdresatami);
-    void zmienNazwePliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
 
 public:
     PlikZAdresatami(string NAZWAPLIKUZADRESATAMI):  nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI){};
