@@ -34,7 +34,4 @@ adresatMenager.wyswietlWszystkichAdresatow();
 adresatMenager.edytujAdresata();
 adresatMenager.wyswietlWszystkichAdresatow();
 
-
-
-
 }
