@@ -6,6 +6,7 @@
 #include <windows.h>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 
 //#include "Uzytkownik.h"
 
@@ -18,6 +19,8 @@ class MetodyPomocnicze
     string wczytajLinie();
     int konwersjaStringNaInt(string liczba);
     char wczytajZnak();
+    int wczytajLiczbeCalkowita();
+    string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 };
 
 #endif
