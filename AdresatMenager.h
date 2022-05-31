@@ -16,6 +16,7 @@ class AdresatMenager {
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
     vector <Adresat> adresaci;
+    //string nazwaPlikuZDresatami;
 
     Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
     int pobierzIdNowegoAdresata();
@@ -26,6 +27,7 @@ public:
     AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami)
     {
     wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
+    //this->nazwaPlikuZDresatami = nazwaPlikuZDresatami;
     }
 
     void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);

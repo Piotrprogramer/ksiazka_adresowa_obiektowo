@@ -68,7 +68,6 @@ void AdresatMenager::wyswietlWszystkichAdresatow()
 void AdresatMenager::edytujAdresata()
 {
     system("cls");
-    //Adresat adresat;
     int idEdytowanegoAdresata = 0;
     int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
@@ -84,21 +83,18 @@ void AdresatMenager::edytujAdresata()
         if (adresaci[i].pobierzId() == idEdytowanegoAdresata)
         {
             Adresat adresat;
-            adresat = adresaci[i];
             czyIstniejeAdresat = true;
-            wybor = wybierzOpcjeZMenuEdycja(idEdytowanegoAdresata);
+            wybor = wybierzOpcjeZMenuEdycja(i);
 
             switch (wybor)
             {
             case '1':
                 cout << "Podaj nowe imie: ";
-                //adresaci[i].pobierzImie() = metodyPomocnicze.wczytajLinie();
                 adresaci[i].ustawImie(  metodyPomocnicze.wczytajLinie() );
-                //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
+                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
-                //adresaci[i].pobierzNazwisko() = metodyPomocnicze.wczytajLinie();
                 adresaci[i].ustawNazwisko( metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresaci[i].pobierzNazwisko()) );
                 //zaktualizujDaneWybranegoAdresata(adresaci[i], idEdytowanegoAdresata);
                 break;

@@ -65,19 +65,19 @@
 1653251434 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresat.h
 	<iostream>
 
-1653949791 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.cpp
+1653955411 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.cpp
 	"PlikZAdresatami.h"
 
-1653833404 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.h
+1653957349 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\plikzadresatami.h
 	<vector>
 	<fstream>
 	"Adresat.h"
 	"MetodyPomocnicze.h"
 
-1653953802 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.cpp
+1653955604 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.cpp
 	"AdresatMenager.h"
 
-1653953491 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.h
+1653955604 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\adresatmenager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -95,4 +95,10 @@
 1653833404 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\menu.cpp
 	<windows.h>
 	"Menu.h"
+
+1653954922 source:c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\pliktekstowy.cpp
+	"PlikTekstowy.h"
+
+1653954923 c:\users\wasyli\desktop\przyszlyprogramista\codeblocks\obiektowka\ks_obiektowo\pliktekstowy.h
+	<iostream>
 
