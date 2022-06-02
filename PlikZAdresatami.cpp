@@ -1,5 +1,6 @@
 
 #include "PlikZAdresatami.h"
+#include <iostream>
 
 using namespace std;
 
@@ -188,6 +189,34 @@ void PlikZAdresatami::zaktualizujDaneWybranegoAdresata(Adresat adresat)
             }
             numerWczytanejLinii++;
         }
+        odczytywanyPlikTekstowy.close();
+        tymczasowyPlikTekstowy.close();
+
+        plikTekstowy.usunPlik(nazwaPlikuZAdresatami);
+        plikTekstowy.zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, nazwaPlikuZAdresatami);
+    }
+}
+
+void PlikZAdresatami::usunWybranegoAdresata(int idUsuwanegoAdresata)
+{
+    fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
+    string wczytanaLinia = "";
+    int numerWczytanejLinii = 1;
+    int numerUsuwanejLinii = 0;
+
+    odczytywanyPlikTekstowy.open(nazwaPlikuZAdresatami.c_str(), ios::in);
+    tymczasowyPlikTekstowy.open(nazwaTymczasowegoPlikuZAdresatami.c_str(), ios::out | ios::app);
+
+    if (odczytywanyPlikTekstowy.good() == true && idUsuwanegoAdresata != 0)
+    {
+        while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
+        {
+            if (pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia) == idUsuwanegoAdresata)  numerUsuwanejLinii = numerWczytanejLinii;
+            else if ( numerWczytanejLinii == numerUsuwanejLinii + 1) tymczasowyPlikTekstowy << wczytanaLinia;
+            else tymczasowyPlikTekstowy << endl << wczytanaLinia;
+            numerWczytanejLinii++;
+        }
+
         odczytywanyPlikTekstowy.close();
         tymczasowyPlikTekstowy.close();
 

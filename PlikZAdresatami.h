@@ -33,6 +33,7 @@ public:
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     void dopiszAdresataDoPliku(Adresat adresat);
     void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void usunWybranegoAdresata(int idUsuwanegoAdresata);
 };
 
 #endif
