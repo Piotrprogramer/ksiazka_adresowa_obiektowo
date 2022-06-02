@@ -56,7 +56,7 @@ void KsiazkaAdresowa::wyswietlWszystkichAdresatow()
 {
     adresatMenager->wyswietlWszystkichAdresatow();
 }
-
+/*
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego()
 {
     menu.wybierzOpcjeZMenuGlownego();
@@ -66,3 +66,4 @@ char KsiazkaAdresowa::wybierzOpcjeZMenuUzytkownika()
 {
     menu.wybierzOpcjeZMenuUzytkownika();
 }
+*/

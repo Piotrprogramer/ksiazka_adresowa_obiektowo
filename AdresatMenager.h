@@ -21,7 +21,7 @@ class AdresatMenager {
     int pobierzIdNowegoAdresata();
     int podajIdWybranegoAdresata();
     char wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata);
-
+    void wyswietlDaneAdresata(Adresat adresat);
 
 public:
     AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami)
@@ -32,6 +32,9 @@ public:
     void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
     void dodawanieNowegoAdresata(int idZalogowanegoUzytkownika);
     void edytujAdresata();
+    void wyszukajAdresatowPoNazwisku();
+    void wyszukajAdresatowPoImieniu();
+
     void wyswietlWszystkichAdresatow();
 };
 

@@ -42,16 +42,18 @@
 		<Unit filename="Menu.h" />
 		<Unit filename="MetodyPomocnicze.cpp" />
 		<Unit filename="MetodyPomocnicze.h" />
+		<Unit filename="PlikTekstowy.cpp" />
+		<Unit filename="PlikTekstowy.h" />
 		<Unit filename="PlikZAdresatami.cpp" />
 		<Unit filename="PlikZAdresatami.h" />
 		<Unit filename="PlikZUzytkownikami.cpp" />
 		<Unit filename="PlikZUzytkownikami.h" />
 		<Unit filename="Uzytkownicy.txt" />
 		<Unit filename="Uzytkownik.cpp" />
+		<Unit filename="Uzytkownik.h" />
 		<Unit filename="UzytkownikMenager.cpp" />
 		<Unit filename="UzytkownikMenager.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="uzytkownik.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

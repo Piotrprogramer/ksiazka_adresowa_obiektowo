@@ -33,8 +33,9 @@ adresatMenager.wczytanieAdresatowDoPamieci(2);
 adresatMenager.wyswietlWszystkichAdresatow();
 //adresatMenager.edytujAdresata();
 //adresatMenager.dodawanieNowegoAdresata(2);
+//adresatMenager.dodawanieNowegoAdresata(2);
 system("pause");
-adresatMenager.wyswietlWszystkichAdresatow();
-adresatMenager.usunAdresata();
-adresatMenager.wyswietlWszystkichAdresatow();
+//adresatMenager.wyswietlWszystkichAdresatow();
+//adresatMenager.usunAdresata();
+adresatMenager.wyszukajAdresatowPoImieniu();
 }

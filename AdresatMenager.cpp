@@ -14,6 +14,10 @@ void AdresatMenager::dodawanieNowegoAdresata(int idZalogowanegoUzytkownika)
 {
     Adresat adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
 
+    adresat.ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
+    adresat.ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
+
+
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
 
@@ -146,11 +150,11 @@ char AdresatMenager::wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata)
     cout << endl << "   >>> MENU  EDYCJA <<<" << endl;
     cout << "---------------------------" << endl;
     cout << "Ktore dane zaktualizowac: " << endl;
-    cout << "1 - Imie- "<< adresaci[idEdytowanegoAdresata].pobierzImie()<< endl;
-    cout << "2 - Nazwisko- " << adresaci[idEdytowanegoAdresata].pobierzNazwisko()<< endl;
-    cout << "3 - Numer telefonu- " << adresaci[idEdytowanegoAdresata].pobierzNumerTelefonu()<< endl;
-    cout << "4 - Email- " << adresaci[idEdytowanegoAdresata].pobierzEmail()<< endl;
-    cout << "5 - Adres- " << adresaci[idEdytowanegoAdresata].pobierzAdres()<< endl;
+    cout << "1 - Imie: "<< adresaci[idEdytowanegoAdresata].pobierzImie()<< endl;
+    cout << "2 - Nazwisko: " << adresaci[idEdytowanegoAdresata].pobierzNazwisko()<< endl;
+    cout << "3 - Numer telefonu: " << adresaci[idEdytowanegoAdresata].pobierzNumerTelefonu()<< endl;
+    cout << "4 - Email: " << adresaci[idEdytowanegoAdresata].pobierzEmail()<< endl;
+    cout << "5 - Adres: " << adresaci[idEdytowanegoAdresata].pobierzAdres()<< endl;
     cout << "6 - Powrot " << endl;
     cout << endl << "Twoj wybor: ";
     wybor = metodyPomocnicze.wczytajZnak();
@@ -179,9 +183,6 @@ void AdresatMenager::usunAdresata()
             znak = metodyPomocnicze.wczytajZnak();
             if (znak == 't')
             {
-                //numerLiniiUsuwanegoAdresata = zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
-                //usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
-                //adresaci.erase(itr);
                 plikZAdresatami.usunWybranegoAdresata(adresaci[i].pobierzId());
                 adresaci.erase(adresaci.begin()+i);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
@@ -199,5 +200,79 @@ void AdresatMenager::usunAdresata()
         cout << endl << "Nie ma takiego adresata w ksiazce adresowej" << endl << endl;
         system("pause");
     }
+}
+
+void AdresatMenager::wyszukajAdresatowPoImieniu()
+{
+    string imiePoszukiwanegoAdresata = "";
+    int iloscAdresatow = 0;
+
+    system("cls");
+    if (!adresaci.empty())
+    {
+        cout << ">>> WYSZUKIWANIE ADRESATOW O IMIENIU <<<" << endl << endl;
+
+        cout << "Wyszukaj adresatow o imieniu: ";
+        imiePoszukiwanegoAdresata = metodyPomocnicze.wczytajLinie();
+        imiePoszukiwanegoAdresata = metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
+
+        for (vector <Adresat>::iterator  itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            if (itr -> pobierzImie() == imiePoszukiwanegoAdresata)
+            {
+                wyswietlDaneAdresata(*itr);
+                iloscAdresatow++;
+            }
+        }
+        //wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
+    }
+    cout << endl;
+    system("pause");
+}
+
+void AdresatMenager::wyszukajAdresatowPoNazwisku()
+{
+    string nazwiskoPoszukiwanegoAdresata;
+    int iloscAdresatow = 0;
+
+    system("cls");
+    if (!adresaci.empty())
+    {
+        cout << ">>> WYSZUKIWANIE ADRESATOW O NAZWISKU <<<" << endl << endl;
+
+        cout << "Wyszukaj adresatow o nazwisku: ";
+        nazwiskoPoszukiwanegoAdresata = metodyPomocnicze.wczytajLinie();
+        nazwiskoPoszukiwanegoAdresata = metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwiskoPoszukiwanegoAdresata);
+
+        for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
+        {
+            if (itr -> pobierzNazwisko() == nazwiskoPoszukiwanegoAdresata)
+            {
+                wyswietlDaneAdresata(*itr);
+                iloscAdresatow++;
+            }
+        }
+        //wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+    }
+    else
+    {
+        cout << endl << "Ksiazka adresowa jest pusta." << endl << endl;
+    }
+    cout << endl;
+    system("pause");
+}
+
+void AdresatMenager::wyswietlDaneAdresata(Adresat adresat)
+{
+    cout << endl << "Id:                 " << adresat.pobierzId() << endl;
+    cout << "Imie:               " << adresat.pobierzImie() << endl;
+    cout << "Nazwisko:           " << adresat.pobierzNazwisko() << endl;
+    cout << "Numer telefonu:     " << adresat.pobierzNumerTelefonu() << endl;
+    cout << "Email:              " << adresat.pobierzEmail() << endl;
+    cout << "Adres:              " << adresat.pobierzAdres() << endl;
 }
 
