@@ -6,10 +6,14 @@
 
 using namespace std;
 
-int _main()
+int main()
 {
 
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
+
+    ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
+    /*
+    ksiazkaAdresowa.wybierzOpcjeZMenuUzytkownika();
 
     ksiazkaAdresowa.wypiszWszystkichUzytkownikow();
 
@@ -20,13 +24,14 @@ int _main()
     ksiazkaAdresowa.wyswietlWszystkichAdresatow();
 
     ksiazkaAdresowa.wylogujUzytkownika();
+    */
 
     return 0;
 
 }
 
 #include "AdresatMenager.h"
-int main(){
+int AdresatMenager_main(){
 
 AdresatMenager adresatMenager(2,"Adresaci.txt");
 adresatMenager.wczytanieAdresatowDoPamieci(2);
@@ -38,4 +43,12 @@ system("pause");
 //adresatMenager.wyswietlWszystkichAdresatow();
 //adresatMenager.usunAdresata();
 adresatMenager.wyszukajAdresatowPoImieniu();
+}
+
+#include "Menu.h"
+
+int Menu_main(){
+
+Menu menu;
+menu.wybierzOpcjeZMenuUzytkownika();
 }

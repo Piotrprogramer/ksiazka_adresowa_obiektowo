@@ -20,6 +20,8 @@ char Menu::wybierzOpcjeZMenuGlownego()
         if (wybor == '1' || wybor == '2' || wybor == '9') break;
         else cout<<"Nie ma opcji '"<<wybor<<"', wybierz ponownie"<<endl;
     }
+
+    return wybor;
 }
 
 char Menu::wybierzOpcjeZMenuUzytkownika() {

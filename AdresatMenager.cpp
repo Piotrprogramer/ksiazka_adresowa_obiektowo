@@ -15,7 +15,7 @@ void AdresatMenager::dodawanieNowegoAdresata(int idZalogowanegoUzytkownika)
     Adresat adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
 
     adresat.ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
-    adresat.ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
+    adresat.ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzNazwisko()));
 
 
     adresaci.push_back(adresat);
@@ -69,6 +69,7 @@ void AdresatMenager::wyswietlWszystkichAdresatow()
         cout<<adresaci[i].pobierzEmail()<<endl;
         cout<<adresaci[i].pobierzAdres()<<endl;
     }
+    system("pause");
 }
 
 void AdresatMenager::edytujAdresata()
@@ -96,28 +97,39 @@ void AdresatMenager::edytujAdresata()
             {
             case '1':
                 cout << "Podaj nowe imie: ";
-                adresaci[i].ustawImie(  metodyPomocnicze.wczytajLinie() );
+                adresaci[i].ustawImie( metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(metodyPomocnicze.wczytajLinie()) );
+
+                //adresaci[i].ustawImie(  metodyPomocnicze.wczytajLinie() );
+                //adresat[i].ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
+
+
                 plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                cout << "Nowe imie zostalo zapisane poprawnie "<<endl;
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
-                adresaci[i].ustawNazwisko( metodyPomocnicze.wczytajLinie() );
+                //adresaci[i].ustawNazwisko( metodyPomocnicze.wczytajLinie() );
+
+                adresaci[i].ustawNazwisko( metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(metodyPomocnicze.wczytajLinie()) );
                 plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 adresaci[i].ustawNumerTelefonu( metodyPomocnicze.wczytajLinie() );
                 plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                    cout << "Nowy numer telefonu zostal zapisany poprawnie "<<endl;
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 adresaci[i].ustawEmail( metodyPomocnicze.wczytajLinie() );
                 plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                cout << "Nowe email zostal zapisany poprawnie "<<endl;
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 adresaci[i].ustawAdres( metodyPomocnicze.wczytajLinie() );
                 plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                cout << "Now adres zostal zapisany poprawnie "<<endl;
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;

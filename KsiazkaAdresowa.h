@@ -42,7 +42,7 @@ public:
     int pobierzIdZalogowanegoUzytkownika();
     void wyswietlIdZalogowanegoUzytkownika();
 
-    //char wybierzOpcjeZMenuGlownego();
-    //char wybierzOpcjeZMenuUzytkownika();
+    void wybierzOpcjeZMenuUzytkownika();
+    char wybierzOpcjeZMenuGlownego();
 };
 #endif
