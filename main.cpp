@@ -14,5 +14,4 @@ int main()
     ksiazkaAdresowa.wybierzOpcjeZMenuGlownego();
 
     return 0;
-
 }

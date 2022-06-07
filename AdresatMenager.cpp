@@ -4,15 +4,15 @@
 
 
 using namespace std;
-
-void AdresatMenager::wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika)
+/*
+void AdresatMenager::wczytanieAdresatowDoPamieci()
 {
     adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
 }
-
-void AdresatMenager::dodawanieNowegoAdresata(int idZalogowanegoUzytkownika)
+*/
+void AdresatMenager::dodawanieNowegoAdresata()
 {
-    Adresat adresat = podajDaneNowegoAdresata(idZalogowanegoUzytkownika);
+    Adresat adresat = podajDaneNowegoAdresata();
 
     adresat.ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
     adresat.ustawNazwisko(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzNazwisko()));
@@ -25,10 +25,11 @@ void AdresatMenager::dodawanieNowegoAdresata(int idZalogowanegoUzytkownika)
     system("pause");
 }
 
-Adresat AdresatMenager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
+Adresat AdresatMenager::podajDaneNowegoAdresata()
 {
     Adresat adresat;
-    adresat.ustawId(pobierzIdNowegoAdresata());
+    //adresat.ustawId(pobierzIdNowegoAdresata());
+    adresat.ustawId(idOstatniegoAdresata++);
     adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
     string imie;
     cout << "Podaj imie: ";
@@ -53,10 +54,11 @@ Adresat AdresatMenager::podajDaneNowegoAdresata(int idZalogowanegoUzytkownika)
 
     return adresat;
 }
-
+/*
 int AdresatMenager::pobierzIdNowegoAdresata() {
         return plikZAdresatami.pobierzIdOstatniegoAdresata()+1;
 }
+*/
 
 void AdresatMenager::wyswietlWszystkichAdresatow()
 {
@@ -80,7 +82,7 @@ void AdresatMenager::edytujAdresata()
     string liniaZDanymiAdresata = "";
 
     cout << ">>> EDYCJA WYBRANEGO ADRESATA <<<" << endl << endl;
-    idEdytowanegoAdresata = podajIdWybranegoAdresata();
+    idEdytowanegoAdresata = metodyPomocnicze.wczytajLiczbeCalkowita();
 
     char wybor;
     bool czyIstniejeAdresat = false;
@@ -103,7 +105,7 @@ void AdresatMenager::edytujAdresata()
                 //adresat[i].ustawImie(metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(adresat.pobierzImie()));
 
 
-                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.aktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                 cout << "Nowe imie zostalo zapisane poprawnie "<<endl;
                 break;
             case '2':
@@ -111,24 +113,24 @@ void AdresatMenager::edytujAdresata()
                 //adresaci[i].ustawNazwisko( metodyPomocnicze.wczytajLinie() );
 
                 adresaci[i].ustawNazwisko( metodyPomocnicze.zamienPierwszaLitereNaDuzaAPozostaleNaMale(metodyPomocnicze.wczytajLinie()) );
-                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.aktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 adresaci[i].ustawNumerTelefonu( metodyPomocnicze.wczytajLinie() );
-                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.aktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                     cout << "Nowy numer telefonu zostal zapisany poprawnie "<<endl;
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 adresaci[i].ustawEmail( metodyPomocnicze.wczytajLinie() );
-                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.aktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                 cout << "Nowe email zostal zapisany poprawnie "<<endl;
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 adresaci[i].ustawAdres( metodyPomocnicze.wczytajLinie() );
-                plikZAdresatami.zaktualizujDaneWybranegoAdresata(adresaci[i]);
+                plikZAdresatami.aktualizujDaneWybranegoAdresataWPliku(adresaci[i]);
                 cout << "Now adres zostal zapisany poprawnie "<<endl;
                 break;
             case '6':
@@ -146,7 +148,7 @@ void AdresatMenager::edytujAdresata()
     }
     system("pause");
 }
-
+/*
 int AdresatMenager::podajIdWybranegoAdresata()
 {
     int idWybranegoAdresata = 0;
@@ -154,7 +156,7 @@ int AdresatMenager::podajIdWybranegoAdresata()
     idWybranegoAdresata  = metodyPomocnicze.wczytajLiczbeCalkowita();
     return idWybranegoAdresata;
 }
-
+*/
 char AdresatMenager::wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata)
 {
     char wybor;
@@ -181,7 +183,7 @@ void AdresatMenager::usunAdresata()
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
-    idUsuwanegoAdresata = podajIdWybranegoAdresata();
+    idUsuwanegoAdresata = metodyPomocnicze.wczytajLiczbeCalkowita();
 
     char znak;
     bool czyIstniejeAdresat = false;
@@ -197,6 +199,9 @@ void AdresatMenager::usunAdresata()
             {
                 plikZAdresatami.usunWybranegoAdresata(adresaci[i].pobierzId());
                 adresaci.erase(adresaci.begin()+i);
+
+
+
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
             }

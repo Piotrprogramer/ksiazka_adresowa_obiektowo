@@ -30,17 +30,17 @@ public:
     };
 
     void rejestracjaUzytkownika();
-    void wypiszWszystkichUzytkownikow();
+    //void wypiszWszystkichUzytkownikow();
     void logowanieUzytkownika();
     void wylogujUzytkownika();
     void zmienHasloZalogowanegoUzytkownika();
 
     void dodawanieNowegoAdresata();
-    void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
+    //void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
     void wyswietlWszystkichAdresatow();
 
-    int pobierzIdZalogowanegoUzytkownika();
-    void wyswietlIdZalogowanegoUzytkownika();
+    //int pobierzIdZalogowanegoUzytkownika();
+    //void wyswietlIdZalogowanegoUzytkownika();
 
     void wybierzOpcjeZMenuUzytkownika();
     char wybierzOpcjeZMenuGlownego();

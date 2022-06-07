@@ -32,7 +32,7 @@ public:
     vector <Adresat> wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
     Adresat pobierzDaneAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     void dopiszAdresataDoPliku(Adresat adresat);
-    void zaktualizujDaneWybranegoAdresata(Adresat adresat);
+    void aktualizujDaneWybranegoAdresataWPliku(Adresat adresat);
     void usunWybranegoAdresata(int idUsuwanegoAdresata);
 };
 

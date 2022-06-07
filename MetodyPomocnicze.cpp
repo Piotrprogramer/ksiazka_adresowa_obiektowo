@@ -70,3 +70,5 @@ string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst
     }
     return tekst;
 }
+
+//string MetodyPomocnicze::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik)

@@ -159,7 +159,7 @@ int PlikZAdresatami::pobierzIdOstatniegoAdresata()
     return idOstatniegoAdresata;
 }
 
-void PlikZAdresatami::zaktualizujDaneWybranegoAdresata(Adresat adresat)
+void PlikZAdresatami::aktualizujDaneWybranegoAdresataWPliku(Adresat adresat)
 {
 
     fstream odczytywanyPlikTekstowy, tymczasowyPlikTekstowy;
@@ -222,5 +222,7 @@ void PlikZAdresatami::usunWybranegoAdresata(int idUsuwanegoAdresata)
 
         plikTekstowy.usunPlik(nazwaPlikuZAdresatami);
         plikTekstowy.zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, nazwaPlikuZAdresatami);
+
+        ustawIdOstatniegoAdresata(wczytanaLinia);
     }
 }

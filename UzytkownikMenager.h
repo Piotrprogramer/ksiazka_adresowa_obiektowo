@@ -22,7 +22,7 @@ class UzytkownikMenager
     Uzytkownik podajDaneNowegoUzytkownika();
     int pobierzIdNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
-    string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
+    //string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     MetodyPomocnicze metodyPomocnicze;
 
 public:
@@ -31,16 +31,16 @@ public:
     wczytajUzytkownikowZPliku();
     };
     void rejestracjaUzytkownika();
-    void wypiszWszystkichUzytkownikow();
+    //void wypiszWszystkichUzytkownikow();
     void wczytajUzytkownikowZPliku();
 
-    void logowanieUzytkownika();
+    int logowanieUzytkownika();
     void wylogujUzytkownika();
     void zmienHasloZalogowanegoUzytkownika();
-    void zapiszWszystkichUzytkownikowDoPliku();
+    //void zapiszWszystkichUzytkownikowDoPliku();
 
     int pobierzIdZalogowanegoUzytkownika();
-    void wyswietlIdZalogowanegoUzytkownika();
+    //void wyswietlIdZalogowanegoUzytkownika();
 };
 
 #endif
