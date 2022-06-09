@@ -70,11 +70,13 @@ vector <Adresat> PlikZAdresatami::wczytanieAdresatowDoPamieci(int idZalogowanego
             }
         }
     }
-    ustawIdOstatniegoAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
+
+    //ustawIdOstatniegoAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
+    idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami);
     plikTekstowy.close();
     return adresaci;
 }
-
+/*
 void PlikZAdresatami::ustawIdOstatniegoAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {
     char znak = ' ';
@@ -87,7 +89,7 @@ void PlikZAdresatami::ustawIdOstatniegoAdresata(string daneJednegoAdresataOddzie
     }
     idOstatniegoAdresata = metodyPomocnicze.konwersjaStringNaInt(wczytywaneIdAdresata);
 }
-
+*/
 int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {
     int pozycjaRozpoczeciaIdUzytkownika = daneJednegoAdresataOddzielonePionowymiKreskami.find_first_of('|') + 1;
@@ -211,10 +213,20 @@ void PlikZAdresatami::usunWybranegoAdresata(int idUsuwanegoAdresata)
     {
         while (getline(odczytywanyPlikTekstowy, wczytanaLinia))
         {
-            if (pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia) == idUsuwanegoAdresata)  numerUsuwanejLinii = numerWczytanejLinii;
-            else if ( numerWczytanejLinii == numerUsuwanejLinii + 1) tymczasowyPlikTekstowy << wczytanaLinia;
-            else tymczasowyPlikTekstowy << endl << wczytanaLinia;
+            if (pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia) == idUsuwanegoAdresata)  {
+                numerUsuwanejLinii = numerWczytanejLinii;
+            }
+            if (numerWczytanejLinii == numerUsuwanejLinii) {}
+            else if (numerWczytanejLinii == 1 && numerWczytanejLinii != numerUsuwanejLinii)
+                tymczasowyPlikTekstowy << wczytanaLinia;
+            else if (numerWczytanejLinii == 2 && numerUsuwanejLinii == 1)
+                tymczasowyPlikTekstowy << wczytanaLinia;
+            else if (numerWczytanejLinii > 2 && numerUsuwanejLinii == 1)
+                tymczasowyPlikTekstowy << endl << wczytanaLinia;
+            else if (numerWczytanejLinii > 1 && numerUsuwanejLinii != 1)
+                tymczasowyPlikTekstowy << endl << wczytanaLinia;
             numerWczytanejLinii++;
+            if( numerWczytanejLinii != numerUsuwanejLinii) idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(wczytanaLinia);
         }
 
         odczytywanyPlikTekstowy.close();
@@ -223,6 +235,6 @@ void PlikZAdresatami::usunWybranegoAdresata(int idUsuwanegoAdresata)
         plikTekstowy.usunPlik(nazwaPlikuZAdresatami);
         plikTekstowy.zmienNazwePliku(nazwaTymczasowegoPlikuZAdresatami, nazwaPlikuZAdresatami);
 
-        ustawIdOstatniegoAdresata(wczytanaLinia);
+       // ustawIdOstatniegoAdresata(wczytanaLinia);
     }
 }

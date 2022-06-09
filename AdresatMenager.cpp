@@ -179,7 +179,7 @@ char AdresatMenager::wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata)
 void AdresatMenager::usunAdresata()
 {
     int idUsuwanegoAdresata = 0;
-    int numerLiniiUsuwanegoAdresata = 0;
+    //int numerLiniiUsuwanegoAdresata = 0;
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -199,9 +199,7 @@ void AdresatMenager::usunAdresata()
             {
                 plikZAdresatami.usunWybranegoAdresata(adresaci[i].pobierzId());
                 adresaci.erase(adresaci.begin()+i);
-
-
-
+                idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
             }

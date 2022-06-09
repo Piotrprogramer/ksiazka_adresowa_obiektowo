@@ -22,7 +22,7 @@ class PlikZAdresatami
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
     bool czyPlikJestPusty();
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
-    void ustawIdOstatniegoAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    //void ustawIdOstatniegoAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
 
 public:
