@@ -48,7 +48,7 @@ vector <Adresat> PlikZAdresatami::wczytanieAdresatowDoPamieci(int idZalogowanego
                 adresaci.push_back(adresat);
             }
         }
-        idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami);
+        if ( czyPlikJestPusty() == false ) idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami);
     }
     plikTekstowy.close();
 

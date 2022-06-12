@@ -15,7 +15,7 @@ using namespace std;
 class AdresatMenager {
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
-    int idZalogowanegoUzytkownika;
+    int const ID_ZALOGOWANEGO_UZYTKOWNIKA;
     int idOstatniegoAdresata ;
     vector <Adresat> adresaci;
 
@@ -24,9 +24,9 @@ class AdresatMenager {
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami) {
+    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZAdresatami)
+        :ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika), plikZAdresatami(nazwaPlikuZAdresatami) {
         adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
-        this->idZalogowanegoUzytkownika = idZalogowanegoUzytkownika;
         idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
     }
 
