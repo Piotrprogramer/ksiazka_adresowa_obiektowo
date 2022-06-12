@@ -8,19 +8,16 @@
 #include <sstream>
 #include <algorithm>
 
-//#include "Uzytkownik.h"
-
 using namespace std;
 
-class MetodyPomocnicze
-{
+class MetodyPomocnicze{
+
     public:
     static string konwerjsaIntNaString(int liczba);
     string wczytajLinie();
-    int konwersjaStringNaInt(string liczba);
+    static int konwersjaStringNaInt(string liczba);
     char wczytajZnak();
     int wczytajLiczbeCalkowita();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 };
-
 #endif

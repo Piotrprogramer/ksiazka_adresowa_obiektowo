@@ -16,25 +16,21 @@ class AdresatMenager {
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
     int idZalogowanegoUzytkownika;
-    int idOstatniegoAdresata;
+    int idOstatniegoAdresata ;
     vector <Adresat> adresaci;
 
     Adresat podajDaneNowegoAdresata();
-    //int pobierzIdNowegoAdresata();
-    //int podajIdWybranegoAdresata();
-    //int pobierzIdOstatniegoAdresata();
     char wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata);
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami)
-    {
-    adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
-    idZalogowanegoUzytkownika = this->idZalogowanegoUzytkownika;
-
+    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami) {
+        adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
+        this->idZalogowanegoUzytkownika = idZalogowanegoUzytkownika;
+        idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
     }
+
     void usunAdresata();
-    //void wczytanieAdresatowDoPamieci();
     void dodawanieNowegoAdresata();
     void edytujAdresata();
     void wyszukajAdresatowPoNazwisku();

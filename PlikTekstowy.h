@@ -6,12 +6,13 @@
 
 using namespace std;
 
+class PlikTekstowy{
 
-class PlikTekstowy
-{
+    protected:
+    string const NAZWA_PLIKU;
+
     public:
-    void usunPlik(string nazwaPlikuZAdresatami);
-    void zmienNazwePliku(string nazwaTymczasowegoPlikuZRozszerzeniem, string nazwaPlikuZRozszerzeniem);
+    bool czyPlikJestPusty();
+    PlikTekstowy(string nazwaPliku): NAZWA_PLIKU(nazwaPliku){};
 };
-
 #endif

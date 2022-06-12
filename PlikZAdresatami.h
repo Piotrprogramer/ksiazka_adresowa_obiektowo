@@ -1,32 +1,30 @@
 #ifndef PLIKZADRESATAMI_H
 #define PLIKZADRESATAMI_H
 
+#include <iostream>
 #include <vector>
 #include <fstream>
+
 #include "Adresat.h"
 #include "MetodyPomocnicze.h"
 #include "PlikTekstowy.h"
 
 using namespace std;
 
-class PlikZAdresatami
-{
-    MetodyPomocnicze metodyPomocnicze;
-    PlikTekstowy plikTekstowy;
+class PlikZAdresatami :public PlikTekstowy{
 
-    const string nazwaPlikuZAdresatami;
     const string nazwaTymczasowegoPlikuZAdresatami = "TymczasowyPlikZAdresatami";
-    int idOstatniegoAdresata;
+    int idOstatniegoAdresata = 0;
 
     string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
-    bool czyPlikJestPusty();
     string pobierzLiczbe(string tekst, int pozycjaZnaku);
-    //void ustawIdOstatniegoAdresata(string daneJednegoAdresataOddzielonePionowymiKreskami);
     int pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
+    void usunPlik(string nazwaPlikuZRozszerzeniem);
+    void zmienNazwePliku(string staraNazwa, string nowaNazwa);
 
 public:
-    PlikZAdresatami(string NAZWAPLIKUZADRESATAMI):  nazwaPlikuZAdresatami(NAZWAPLIKUZADRESATAMI){};
+    PlikZAdresatami(string NAZWAPLIKUZADRESATAMI):  PlikTekstowy(NAZWAPLIKUZADRESATAMI){};
 
     int pobierzIdOstatniegoAdresata();
     vector <Adresat> wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
@@ -35,5 +33,4 @@ public:
     void aktualizujDaneWybranegoAdresataWPliku(Adresat adresat);
     void usunWybranegoAdresata(int idUsuwanegoAdresata);
 };
-
 #endif
