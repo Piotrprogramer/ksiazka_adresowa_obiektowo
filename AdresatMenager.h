@@ -15,26 +15,26 @@ using namespace std;
 class AdresatMenager {
     PlikZAdresatami plikZAdresatami;
     MetodyPomocnicze metodyPomocnicze;
+    int idZalogowanegoUzytkownika;
+    int idOstatniegoAdresata ;
     vector <Adresat> adresaci;
 
-    Adresat podajDaneNowegoAdresata(int idZalogowanegoUzytkownika);
-    int pobierzIdNowegoAdresata();
-    int podajIdWybranegoAdresata();
+    Adresat podajDaneNowegoAdresata();
     char wybierzOpcjeZMenuEdycja(int idEdytowanegoAdresata);
     void wyswietlDaneAdresata(Adresat adresat);
 
 public:
-    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami)
-    {
-    wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
+    AdresatMenager(int idZalogowanegoUzytkownika, string nazwaPlikuZDresatami): plikZAdresatami(nazwaPlikuZDresatami) {
+        adresaci = plikZAdresatami.wczytanieAdresatowDoPamieci(idZalogowanegoUzytkownika);
+        this->idZalogowanegoUzytkownika = idZalogowanegoUzytkownika;
+        idOstatniegoAdresata = plikZAdresatami.pobierzIdOstatniegoAdresata();
     }
+
     void usunAdresata();
-    void wczytanieAdresatowDoPamieci(int idZalogowanegoUzytkownika);
-    void dodawanieNowegoAdresata(int idZalogowanegoUzytkownika);
+    void dodawanieNowegoAdresata();
     void edytujAdresata();
     void wyszukajAdresatowPoNazwisku();
     void wyszukajAdresatowPoImieniu();
-
     void wyswietlWszystkichAdresatow();
 };
 

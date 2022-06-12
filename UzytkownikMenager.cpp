@@ -1,7 +1,4 @@
 #include "UzytkownikMenager.h"
-#include "MetodyPomocnicze.h"
-#include "PlikZUzytkownikami.h"
-#include "uzytkownik.h"
 
 void UzytkownikMenager::rejestracjaUzytkownika() {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
@@ -48,19 +45,11 @@ bool UzytkownikMenager::czyIstniejeLogin(string login) {
     return false;
 }
 
-void UzytkownikMenager::wypiszWszystkichUzytkownikow() {
-    for(int i=0; i<uzytkownicy.size(); i++) {
-        cout<<endl<<uzytkownicy[i].pobierzId()<<endl;
-        cout<<uzytkownicy[i].pobierzLogin()<<endl;
-        cout<<uzytkownicy[i].pobierzHaslo()<<endl;
-    }
-}
-
 void UzytkownikMenager::wczytajUzytkownikowZPliku() {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
-void UzytkownikMenager::logowanieUzytkownika() {
+int UzytkownikMenager::logowanieUzytkownika() {
     cin.sync();
     bool znalezionoLogin = false;
     string login = "", haslo = "";
@@ -75,10 +64,11 @@ void UzytkownikMenager::logowanieUzytkownika() {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
                 haslo = metodyPomocnicze.wczytajLinie();
                 if (itr ->pobierzHaslo() == haslo) {
+                    idZalogowanegoUzytkownika = itr->pobierzId();
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    idZalogowanegoUzytkownika = itr->pobierzId();
-                    break;
+
+                    return  itr->pobierzId();
                 }
                 if(iloscProb == 1) {
                     cout << "Wprowadzono 3 razy bledne haslo." << endl;
@@ -93,6 +83,8 @@ void UzytkownikMenager::logowanieUzytkownika() {
     if(!znalezionoLogin) {
         cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
         system("pause");
+
+        return 0;
     }
 }
 
@@ -113,7 +105,7 @@ void UzytkownikMenager::zmienHasloZalogowanegoUzytkownika() {
             cout<<itr->pobierzLogin()<<endl;
             cout<<"Haslo zmienione poprawnie "<<endl;
             hasloPoprawnieZmienione = true;
-            zapiszWszystkichUzytkownikowDoPliku();
+            plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
             system("pause");
         }
         itr++;
@@ -128,16 +120,6 @@ void UzytkownikMenager::wylogujUzytkownika() {
     idZalogowanegoUzytkownika = 0;
 }
 
-void UzytkownikMenager::wyswietlIdZalogowanegoUzytkownika() {
-    cout<<endl<<"Zalogowany uzytkownik o ID: "<<idZalogowanegoUzytkownika<<endl;
-    system("pause");
-}
-
 int UzytkownikMenager::pobierzIdZalogowanegoUzytkownika() {
     return idZalogowanegoUzytkownika;
-}
-
-void UzytkownikMenager::zapiszWszystkichUzytkownikowDoPliku()
-{
-    plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }

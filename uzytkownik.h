@@ -5,11 +5,11 @@
 
 using namespace std;
 
-class Uzytkownik
-{
+class Uzytkownik{
     int id;
     string login;
     string haslo;
+
 public:
    void ustawId(int noweId);
    void ustawLogin(string nowyLogin);
@@ -18,5 +18,4 @@ public:
    string pobierzLogin();
    string pobierzHaslo();
 };
-
 #endif
